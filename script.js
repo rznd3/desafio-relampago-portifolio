@@ -65,24 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // começa a observar este elemento com o observer criado acima
         revealObserver.observe(el);
     });
-    // Mobile Menu Toggle
+    // lógica do menu mobile
+    // busca o botão do menu hambúrguer e a lista de links
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
+    // verifica se os elementos existem antes de manipular
     if (mobileMenuBtn && navLinks) {
-        console.log('Mobile menu elements found');
+        // adiciona evento de clique no botão do menu
         mobileMenuBtn.addEventListener('click', () => {
-            console.log('Menu toggle clicked');
+            // alterna a classe 'active' no botão (para animação do x)
+            // e na lista de links (para mostrar/esconder o menu)
             mobileMenuBtn.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
-    } else {
-        console.error('Mobile menu elements NOT found');
     }
 
-    // Close menu when clicking a link
+    // fecha o menu automaticamente ao clicar em um link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
+            // remove a classe active, fechando o menu
             mobileMenuBtn.classList.remove('active');
             navLinks.classList.remove('active');
         });
