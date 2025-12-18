@@ -103,6 +103,21 @@ body::before {
     color: var(--accent-color);
 }
 
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-main);
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -216,7 +231,6 @@ body::before {
     object-fit: cover;
     border-radius: 50%;
     display: block;
-    /* move further to the bottom-right corner relative to the circle */
     right: -35%;
     bottom: -35%;
     border: 6px solid rgba(255, 95, 86, 0.95);
@@ -474,11 +488,100 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 2000;
+        padding: 10px;
+        /* Increase click area */
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        transform: none;
+        padding-top: 100px;
+        z-index: 1500;
+        display: flex;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        /* Larger font for mobile menu */
+    }
+
+    .nav-socials {
+        display: none;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
     .social-links-icons {
         gap: 30px;
+    }
+}
+
+/* Small devices (iPhone SE and similar) */
+@media (max-width: 380px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .title-circle-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-photo.attached {
+        width: 150px;
+        height: 150px;
+        right: -15%;
+        bottom: -15%;
+        border-width: 3px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    a.project-card {
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
     }
 }

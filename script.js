@@ -65,4 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // começa a observar este elemento com o observer criado acima
         revealObserver.observe(el);
     });
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        console.log('Mobile menu elements found');
+        mobileMenuBtn.addEventListener('click', () => {
+            console.log('Menu toggle clicked');
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    } else {
+        console.error('Mobile menu elements NOT found');
+    }
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
 });
