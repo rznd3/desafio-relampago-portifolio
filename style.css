@@ -309,7 +309,7 @@ body::before {
 
 /* estilização do card dos projetos
    agora como elemento 'a' para ser clicável */
-.project-card {
+a.project-card {
     background: var(--card-bg);
     padding: 60px;
     border-radius: 4px;
@@ -321,10 +321,15 @@ body::before {
 
     /* remove o sublinhado padrão de links */
     text-decoration: none;
-    /* herda a cor do texto do pai (branco) em vez do azul padrão de links */
-    color: inherit;
+    /* define a cor branca explicitamente para evitar o azul padrão */
+    color: var(--text-main);
     /* garante que o cursor seja uma mãozinha clicável */
     cursor: pointer;
+}
+
+/* garante que o link visitado continuem com a cor certa */
+a.project-card:visited {
+    color: var(--text-main);
 }
 
 .project-card:hover {
