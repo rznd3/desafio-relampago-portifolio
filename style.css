@@ -284,6 +284,90 @@ header {
     }
 }
 
+/* About Section */
+.about-content-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.skill-tag {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 95, 86, 0.3);
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    background: rgba(255, 95, 86, 0.1);
+    transform: translateY(-3px);
+}
+
+.about-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.visual-card {
+    background: var(--card-bg);
+    padding: 40px 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.visual-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.visual-card span {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.visual-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 95, 86, 0.3);
+}
+
+@media (max-width: 900px) {
+    .about-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-visual {
+        margin-top: 40px;
+    }
+}
+
 /* Projetos */
 .section {
     padding: 150px 5%;

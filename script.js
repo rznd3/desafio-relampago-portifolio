@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // busca o elemento header para alterar seu estilo no scroll
     const header = document.querySelector('header');
 
-    // busca o botão com id 'scroll-to-projects' para adicionar o evento de clique
-    const scrollBtn = document.getElementById('scroll-to-projects');
+    // busca o botão com id 'scroll-to-about' para adicionar o evento de clique
+    const scrollBtn = document.getElementById('scroll-to-about');
 
     // adiciona um 'ouvinte' para todo movimento de rolagem (scroll) na janela do navegador
     window.addEventListener('scroll', () => {
@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // adiciona um evento de clique ao botão 'go'
     scrollBtn.addEventListener('click', () => {
         // busca a seção de projetos pelo id e rola suavemente até ela
-        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
 
-    // seleciona todos os elementos que têm a classe .project-card ou .contact-centered
+    // seleciona todos os elementos que têm a classe .project-card, .contact-centered ou .about-content-wrapper
     // esses elementos serão animados quando aparecerem na tela
-    const revealElements = document.querySelectorAll('.project-card, .contact-centered');
+    const revealElements = document.querySelectorAll('.project-card, .contact-centered, .about-content-wrapper');
 
     // cria um novo intersectionobserver (observador de interseção)
     // ele serve para detectar quando um elemento entra no campo de visão do usuário
