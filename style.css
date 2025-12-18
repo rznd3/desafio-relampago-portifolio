@@ -307,6 +307,8 @@ body::before {
     gap: 30px;
 }
 
+/* estilização do card dos projetos
+   agora como elemento 'a' para ser clicável */
 .project-card {
     background: var(--card-bg);
     padding: 60px;
@@ -316,6 +318,13 @@ body::before {
     transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
     border: 1px solid rgba(255, 255, 255, 0.03);
     overflow: hidden;
+
+    /* remove o sublinhado padrão de links */
+    text-decoration: none;
+    /* herda a cor do texto do pai (branco) em vez do azul padrão de links */
+    color: inherit;
+    /* garante que o cursor seja uma mãozinha clicável */
+    cursor: pointer;
 }
 
 .project-card:hover {
