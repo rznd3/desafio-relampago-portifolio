@@ -44,17 +44,21 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 5%;
+header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: 0.4s;
+    padding: 30px 5%;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -546,7 +550,7 @@ footer {
         display: none;
     }
 
-    .navbar {
+    header {
         padding: 20px 5%;
     }
 

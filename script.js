@@ -2,8 +2,8 @@
 // isso evita erros de tentar acessar elementos que ainda não existem na tela
 document.addEventListener('DOMContentLoaded', () => {
 
-    // busca o elemento <nav> com a classe .navbar para alterar seu estilo no scroll
-    const navbar = document.querySelector('.navbar');
+    // busca o elemento header para alterar seu estilo no scroll
+    const header = document.querySelector('header');
 
     // busca o botão com id 'scroll-to-projects' para adicionar o evento de clique
     const scrollBtn = document.getElementById('scroll-to-projects');
@@ -13,19 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // verifica se a posição vertical do scroll (scrolly) é maior que 50 pixels
         if (window.scrollY > 50) {
-            // se for, muda o fundo da navbar para um cinza quase preto com transparência
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-            // reduz o padding vertical para 15px, deixando a navbar mais compacta
-            navbar.style.padding = '15px 5%';
-            // aplica um leve desfoque no que estiver atrás da navbar (efeito de vidro)
-            navbar.style.backdropFilter = 'blur(10px)';
+            // se for, muda o fundo do header para um cinza quase preto com transparência
+            header.style.background = 'rgba(10, 10, 10, 0.95)';
+            // reduz o padding vertical para 15px, deixando o header mais compacto
+            header.style.padding = '15px 5%';
+            // aplica um leve desfoque no que estiver atrás do header (efeito de vidro)
+            header.style.backdropFilter = 'blur(10px)';
         } else {
             // caso contrário (se o scroll for menor que 50px), remove o fundo
-            navbar.style.background = 'transparent';
+            header.style.background = 'transparent';
             // volta o padding para o tamanho original (maior)
-            navbar.style.padding = '30px 5%';
+            header.style.padding = '30px 5%';
             // remove o efeito de desfoque
-            navbar.style.backdropFilter = 'none';
+            header.style.backdropFilter = 'none';
         }
     });
 
