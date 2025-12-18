@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspirante Full-Stack | Portfólio</title>
+    <!-- stylesheet principal contendo todas as regras de estilização -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- importação de fontes do google fonts: 'playfair display' para títulos (serifada, elegante) 
+         e 'inter' para textos corridos (moderna, legível) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- biblioteca de ícones font awesome para os ícones de redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- menu de navegação fixo no topo da página -->
+    <nav class="navbar">
+        <div class="logo">Gabriel Rezende<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="nav-socials">
+            <a href="https://github.com/rznd3" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gabriel-rezende-paiva/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="circle-overlay"></div>
+            <!-- agrupa a foto e o círculo. 'aria-hidden' faz leitores de tela ignorarem esses enfeites -->
+            <div class="title-circle-wrapper" aria-hidden="true">
+                <div class="title-circle"></div>
+                <img src="images/profile.png" alt="Foto de perfil" class="profile-photo attached">
+            </div>
+            <div class="hero-content">
+                <p class="subtitle">ASPIRANTE A FULL-STACK</p>
+                <h1 class="main-title">Soluções<br>Modernas</h1>
+                <p class="tagline"><i>Codificando o futuro com precisão e resultados.</i></p>
+                <div class="go-button" id="scroll-to-projects">GO</div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="number">01</span>
+                    <h2 class="section-title">Projetos</h2>
+                </div>
+
+                <!-- grade automática para exibir os cards dos projetos -->
+                <div class="projects-grid">
+                    <!-- card do projeto -->
+                    <div class="project-card">
+                        <img src="images/components-project.png" alt="SPA Project" class="project-image">
+                        <span class="category">Web Application</span>
+                        <h3>One page</h3>
+                        <p>One page utilizando Web Components</p>
+                        <div class="techs">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-link">→</div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/remember-me-project.png" alt="remember.me Project" class="project-image">
+                        <span class="category">UI/UX Design</span>
+                        <h3>remember.me</h3>
+                        <p>Protótipo: álbum de fotos digital</p>
+                        <div class="techs">
+                            <span>Figma</span>
+                        </div>
+                        <div class="project-link">→</div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/alura-books-project.png" alt="Alura Books Project" class="project-image">
+                        <span class="category">Web Application</span>
+                        <h3>Alura Books</h3>
+                        <p>Projeto de estudos com arrays e métodos JavaScript.</p>
+                        <div class="techs">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-link">→</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-centered">
+                    <div class="section-header center-text">
+                        <span class="number">02</span>
+                        <h2 class="section-title">Vamos Conversar?</h2>
+                    </div>
+                    <p class="contact-desc">Disponível para novas oportunidades e conexões profissionais.</p>
+
+                    <a href="mailto:grezende310@gmail.com" class="big-email-cta">
+                        grezende310@gmail.com
+                        <span class="underline"></span>
+                    </a>
+
+                    <div class="social-links-icons">
+                        <a href="https://github.com/rznd3" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GITHUB</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gabriel-rezende-paiva/" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LINKEDIN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gabriel Rezende</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
